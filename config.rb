@@ -4,6 +4,7 @@ require './app'
 
 require 'grid-coordinates'
 require 'meyer-reset'
+require 'compass-colors'
 
 # Configuration to use when running within Sinatra
 project_path          = Sinatra::Application.root
