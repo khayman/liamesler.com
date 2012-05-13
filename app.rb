@@ -5,7 +5,6 @@ require 'compass'
 
 # Helpers
 require './lib/helpers'
-require './lib/render_partial'
 
 # Set Sinatra variables
 set :app_file, __FILE__
