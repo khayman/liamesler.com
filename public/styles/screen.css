@@ -1,0 +1,40 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+caption, th, td { text-align: left; font-weight: normal; vertical-align: middle; }
+
+q, blockquote { quotes: none; }
+q:before, q:after, blockquote:before, blockquote:after { content: ""; content: none; }
+
+a img { border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+.left { float: left; }
+
+.right { float: right; }
+
+.clear { clear: both; }
+
+html { background: #efeae1 url("/images/bg.jpg") repeat; }
+
+body { font: 16px Lato, "Segoe UI", "Helvetica Neue", Arial, "Helvetica", sans-serif; background: transparent url("/images/leaves.png") center top no-repeat; }
+
+header { background: url("/images/bg-top.png") repeat-x; min-height: 182px; overflow: auto; }
+header .logo { -moz-transition-property: top; -webkit-transition-property: top; -o-transition-property: top; transition-property: top; -moz-transition-duration: 0.15s; -webkit-transition-duration: 0.15s; -o-transition-duration: 0.15s; transition-duration: 0.15s; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; background: url("/images/logo.png") no-repeat; display: block; float: left; height: 98px; margin-top: 50px; position: relative; top: 3px; width: 182px; }
+header .logo:hover { opacity: 0.87; top: 0; }
+header nav { margin-top: 75px; height: 100px; float: right; }
+header nav a:link, header nav a:visited { color: #4a4845; display: block; float: left; font-size: 113%; font-weight: normal; margin: 0 15px; padding: 5px; text-decoration: none; text-transform: uppercase; }
+header nav a:hover, header nav a:active { background: #dddddd; color: #333333; }
+header nav a.expand:after { font-size: 68%; content: "\25BC"; position: relative; margin-left: 5px; vertical-align: top; top: 3px; }
+
+.wrapper { margin: 0 auto; width: 1120px; }
+
+a { color: #3366cc; }
+a:hover { color: #3366cc; text-decoration: none; }
+a:focus, a:active { outline: none; }

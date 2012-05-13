@@ -15,8 +15,8 @@ http_images_path      = '/images'
 http_javascripts_path = '/scripts'
 
 # File system locations
-css_dir               = File.join 'public', 'styles-compiled'
-sass_dir              = File.join 'views', 'styles'
+css_dir               = File.join 'public', 'styles'
+sass_dir              = File.join 'views' , 'styles'
 images_dir            = File.join 'public', 'images'
 javascripts_dir       = File.join 'public', 'scripts'
 

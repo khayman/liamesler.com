@@ -1,0 +1,71 @@
+@import "_var"
+
+html
+  background: $background-color url("#{$background-image}") $background-repeat
+
+body
+  +font-default
+  background: transparent url('/images/leaves.png') center top no-repeat
+
+header
+  background: url('/images/bg-top.png') repeat-x
+  min-height: 182px
+  overflow: auto
+  .logo
+    +transition-property(top)
+    +transition-duration(.15s)
+    +transition-timing-function(ease-in-out)
+    background: url('/images/logo.png') no-repeat
+    display: block
+    float: left
+    height: 98px
+    margin-top: 50px
+    position: relative
+    top: 3px
+    width: 182px
+    &:hover
+      opacity: .87
+      top: 0
+  nav
+    margin-top: 75px
+    height: 100px
+    float: right
+    a
+      &:link, &:visited
+        color: hsl(36, 4%, 28%)
+        display: block
+        float: left
+        font:
+          size: 113%
+          weight: normal
+        margin: 0 15px
+        padding: 5px
+        text:
+          decoration: none
+          transform: uppercase
+      &:hover, &:active
+        background: #ddd
+        color: #333
+      &.expand
+        &:after
+          font-size: 68%
+          content: '\25BC'
+          position: relative
+          margin-left: 5px
+          vertical-align: top
+          top: 3px
+
+.wrapper
+  margin: 0 auto
+  width: 1120px
+
+// Links
+a
+  color: #3366CC
+  &:hover
+    color: #3366CC
+    text-decoration: none
+  &:focus,
+  &:active
+    outline: none
+  &:visited
