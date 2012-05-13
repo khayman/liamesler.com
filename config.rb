@@ -3,7 +3,6 @@ require './app'
 # Compass Configuration
 
 require 'grid-coordinates'
-require 'meyer-reset'
 require 'compass-colors'
 
 # Configuration to use when running within Sinatra
