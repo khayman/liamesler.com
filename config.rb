@@ -10,15 +10,15 @@ project_path          = Sinatra::Application.root
 
 # HTTP paths
 http_path             = '/'
-http_stylesheets_path = '/stylesheets'
+http_stylesheets_path = '/styles'
 http_images_path      = '/images'
-http_javascripts_path = '/javascripts'
+http_javascripts_path = '/scripts'
 
 # File system locations
-css_dir               = File.join 'public', 'stylesheets'
-sass_dir              = File.join 'views', 'stylesheets'
+css_dir               = File.join 'public', 'styles-compiled'
+sass_dir              = File.join 'views', 'styles'
 images_dir            = File.join 'public', 'images'
-javascripts_dir       = File.join 'public', 'javascripts'
+javascripts_dir       = File.join 'public', 'scripts'
 
 # Syntax preference
 preferred_syntax      = :sass
@@ -30,6 +30,6 @@ relative_assets       = false
 line_comments         = false
 
 # CSS output style - :nested, :expanded, :compact, or :compressed
-output_style          = :expanded
+output_style          = :compact
 
-# Learn more: http://beta.compass-style.org/help/tutorials/configuration-reference/
+# Learn more: http://compass-style.org/help/tutorials/configuration-reference/
