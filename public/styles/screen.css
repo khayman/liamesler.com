@@ -29,9 +29,12 @@ header { background: url("/images/bg-top.png") repeat-x; min-height: 182px; over
 header .logo { -moz-transition-property: top; -webkit-transition-property: top; -o-transition-property: top; transition-property: top; -moz-transition-duration: 0.15s; -webkit-transition-duration: 0.15s; -o-transition-duration: 0.15s; transition-duration: 0.15s; -moz-transition-timing-function: ease-in-out; -webkit-transition-timing-function: ease-in-out; -o-transition-timing-function: ease-in-out; transition-timing-function: ease-in-out; background: url("/images/logo.png") no-repeat; display: block; float: left; height: 98px; margin-top: 50px; position: relative; top: 3px; width: 182px; }
 header .logo:hover { opacity: 0.87; top: 0; }
 header nav { margin-top: 75px; height: 100px; float: right; }
-header nav a:link, header nav a:visited { color: #4a4845; display: block; float: left; font-size: 113%; font-weight: normal; margin: 0 15px; padding: 5px; text-decoration: none; text-transform: uppercase; }
-header nav a:hover, header nav a:active { background: #dddddd; color: #333333; }
-header nav a.expand:after { font-size: 68%; content: "\25BC"; position: relative; margin-left: 5px; vertical-align: top; top: 3px; }
+header nav li { -moz-border-radius: 3px; -webkit-border-radius: 3px; -o-border-radius: 3px; -ms-border-radius: 3px; -khtml-border-radius: 3px; border-radius: 3px; float: left; margin: 0 10px; position: relative; }
+header nav li.active { -moz-box-shadow: rgba(122, 109, 82, 0.25) 0 3px 2px inset; -webkit-box-shadow: rgba(122, 109, 82, 0.25) 0 3px 2px inset; -o-box-shadow: rgba(122, 109, 82, 0.25) 0 3px 2px inset; box-shadow: rgba(122, 109, 82, 0.25) 0 3px 2px inset; background-color: rgba(204, 195, 179, 0.4); border: 1px solid #ccc3b3; border-bottom-color: #d8d2c5; border-top-color: #b5ad9b; }
+header nav li.active:after { bottom: -11px; content: ""; background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAALCAYAAACZIGYHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAARlJREFUeNqUUT1OQzEMdvweN0OiExusXICNiRtwg16hjHAENjhBByYk5icWkthxgj+iJ9qnCrVeIn9/iZ3wvn1t4zBQa5VOrRCYihlxivKUsjgQTgwIBB/87P21xPySsh4d1AOU4IOfVUWI+TLFvAVxTGXXQQ8f/GylUDX7YubznPKkav8GgE9JJtdfwAe/j9PITKlW+/RFrWLMUuzwkoGD93FWrv+AD37sxH/Gg4rih95ccBW/U6217QWgBw4euq7vGp5Ff0Ht2Vd3q8VojsGJHjj43YC9kH5b/Q1yxVqyPkguFHggnOiBg4dut3g5t8/qOyq4/15EN6rVA+QRPXDwyxoPLbCHODme3fgPTr6Hu+IvmPFl/QgwAKKL9mhqHvZtAAAAAElFTkSuQmCC'); display: block; height: 11px; left: 50%; margin-left: -9px; position: absolute; width: 17px; }
+header nav li a:link, header nav li a:visited { color: #4a4845; display: block; font-size: 110%; font-weight: normal; letter-spacing: 1px; padding: 5px 10px; text-decoration: none; text-transform: uppercase; }
+header nav li a:hover, header nav li a:active { color: black; }
+header nav li a.expand:after { font-size: 68%; content: "\25BC"; position: relative; margin-left: 5px; vertical-align: top; top: 3px; }
 
 .wrapper { margin: 0 auto; width: 1120px; }
 

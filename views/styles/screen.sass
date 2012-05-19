@@ -30,30 +30,50 @@ header
     margin-top: 75px
     height: 100px
     float: right
-    a
-      &:link, &:visited
-        color: hsl(36, 4%, 28%)
-        display: block
-        float: left
-        font:
-          size: 113%
-          weight: normal
-        margin: 0 15px
-        padding: 5px
-        text:
-          decoration: none
-          transform: uppercase
-      &:hover, &:active
-        background: #ddd
-        color: #333
-      &.expand
+    li
+      +border-radius(3px)
+      float: left
+      margin: 0 10px
+      position: relative
+      &.active
+        $menu-bg-color: hsl(40, 20%, 75%)
+        +box-shadow(hsla(40, 20%, 40%, .25) 0 3px 2px inset)
+        background-color: hsla(40, 20%, 75%, .4)
+        border: 1px solid hsl(40, 20%, 75%)
+        border-bottom-color: lighten($menu-bg-color, 6)
+        border-top-color: darken(desaturate($menu-bg-color, 5), 9)
         &:after
-          font-size: 68%
-          content: '\25BC'
-          position: relative
-          margin-left: 5px
-          vertical-align: top
-          top: 3px
+          bottom: -11px
+          content: ''
+          background: inline-image('down.png')
+          display: block
+          height: 11px
+          left: 50%
+          margin-left: -9px
+          position: absolute
+          width: 17px
+      a
+        &:link, &:visited
+          color: hsl(36, 4%, 28%)
+          display: block
+          font:
+            size: 110%
+            weight: normal
+          letter-spacing: 1px
+          padding: 5px 10px
+          text:
+            decoration: none
+            transform: uppercase
+        &:hover, &:active
+          color: #000
+        &.expand
+          &:after
+            font-size: 68%
+            content: '\25BC'
+            position: relative
+            margin-left: 5px
+            vertical-align: top
+            top: 3px
 
 .wrapper
   margin: 0 auto
