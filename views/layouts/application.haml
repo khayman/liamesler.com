@@ -10,5 +10,7 @@
 
   %body
     = partial :'site/_header'
-    = yield
+    %section.main-section.wrapper
+      = yield
+    = partial :'site/_footer'
     = partial :'site/_analytics'

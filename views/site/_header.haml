@@ -1,12 +1,20 @@
-%header
+%header.main-header
   .wrapper
     %a.logo{ href: '/' }
     %nav
       %ul
-        %li.active
-          %a{ href: '#about-me' } About Me
         %li
-          %a.expand{ href: '#projects' } Projects
+          %a{ href: '#about-me' } About Me
+        %li.dropdown.active
+          %a{ href: '#projects' } Projects
+          .dropdown-wrapper
+            %ul
+              %li
+                %a{ href: '#' } Sammi Seahorse
+              %li
+                %a{ href: '#' } Something Else
+              %li
+                %a{ href: '#' } Project Three
         %li
           %a{ href: '#resume' } Résumé
         %li
