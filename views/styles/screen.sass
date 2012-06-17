@@ -81,9 +81,9 @@ html, body
       &.active
         +box-shadow(hsla(40, 20%, 40%, .25) 0 3px 2px inset)
         background-color: hsla(40, 20%, 75%, .4)
-        border-color: darken($menu-bg-color, 5)
-        border-bottom-color: lighten($menu-bg-color, 3)
-        border-top-color: darken(desaturate($menu-bg-color, 6), 14)
+        border-color: darken($menu-bg-color, 15)
+        border-bottom-color: darken($menu-bg-color, 5)
+        border-top-color: darken(desaturate($menu-bg-color, 6), 25)
         &:after
           bottom: -11px
           opacity: 1
@@ -113,21 +113,46 @@ html, body
 
 .dropdown-wrapper
   +border-radius(5px)
-  background: rgba(lighten($menu-item-color, 55), .7)
-  border: 1px solid darken(desaturate($menu-bg-color, 6), 14)
-  padding: 10px
-  position: absolute
+  +box-shadow(rgba(black, .10) 0 8px 15px)
+  background: rgba($menu-bg-color, .9)
+  border: 1px solid darken(desaturate($menu-bg-color, 15), 20)
   left: 0
   margin-top: 15px
+  position: absolute
   li
-    display: block
+    +transition-property(background)
+    +transition-duration(.2s)
+    +transition-timing-function(ease-in-out)
     white-space: nowrap
+    border-bottom: 1px solid darken($menu-bg-color, 10)
+    border-top: 1px solid lighten($menu-bg-color, 7)
+    &.sammi
+      background: inline-image('menu-sammi.png') 15px 10px no-repeat
+      padding-left: 60px
+      &:hover
+        background-image: inline-image('menu-sammi-hover.png')
+    &.something-else
+      &:hover
     a
+      +transition-property(color)
+      +transition-duration(.2s)
+      +transition-timing-function(ease-in-out)
+      display: block
+      height: 64px
+      line-height: 64px
+      padding: 0 12px
       &:link, &:visited
+        +single-text-shadow(0, 1px, 0, rgba(white, .7))
         color: $menu-item-color
         text-decoration: none
       &:hover, &:active
-        color: teal
+        background: inline-image('glow.png') bottom center
+        border-bottom-color: darken($menu-bg-color, 15)
+        color: darken($menu-item-color, 35)
+    &:first-of-type
+      border-top: 0
+    &:last-of-type
+      border-bottom: 0
 
 .main-section
   height: auto
