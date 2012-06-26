@@ -21,6 +21,10 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 .clear { clear: both; }
 
+.hidden { visibility: hidden; }
+
+.visible { visibility: visible; }
+
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; -ms-box-sizing: border-box; box-sizing: border-box; }
 
 html { background: #efeae1 url("/images/bg.jpg") repeat; }
