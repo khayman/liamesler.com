@@ -23,6 +23,9 @@ html, body
   background: #bc2a2a
   color: white
 
+p
+  margin-bottom: 15px
+
 .wrapper
   margin: 0 auto
   width: $site-max-width
@@ -64,12 +67,15 @@ html, body
       &.dropdown
         position: relative
         & > a:after
+          color: lighten($menu-item-color, 32)
           content: '\25BC'
           font-size: 65%
           position: relative
           margin-left: 5px
           top: 4px
           vertical-align: top
+        &:hover > a:after
+          color: lighten($menu-item-color, 10)
       &:after
         +transition-property('bottom, opacity')
         +transition-duration('.5s, .5s')
@@ -160,6 +166,9 @@ html, body
         background: rgba(lighten($menu-bg-color, 2), .5) inline-image('glow.png') bottom center
         border-bottom-color: darken($menu-bg-color, 15)
         color: darken($menu-item-color, 35)
+      &:active
+        background-color: saturate(darken($menu-bg-color, 7), 2)
+        border-color: transparent
       &:hover .menu-icon
         background-position: 0 -43px
     &:first-of-type
@@ -179,15 +188,16 @@ html, body
   padding-bottom: 53px
   h1
     font-size: 175%
-    margin: 5px 0
+    margin: 5px 0 15px
   footer
     margin-top: 15px
     font-size: 87.5%
-  aside
+  .wrapper > aside
     width: 250px
     h1
       font-size: 135%
-  .content
+  .wrapper > .content
+    width: 800px
     padding-bottom: 40px
 
 .main-footer
@@ -248,7 +258,6 @@ html, body
     &:link, &:visited
       border-bottom: 1px dashed rgba($dark-bg-text-color, .35)
       color: $dark-bg-text-color
-      text-decoration: none
     &:hover, &:active
       border:
         bottom-style: solid
@@ -257,9 +266,21 @@ html, body
 
 // Links
 a
-  color: #3366CC
+  text-decoration: none
+.main-section a
+  +transition-property('color background')
+  +transition-duration(.1s)
+  +transition-timing-function(ease-in-out)
+  border-bottom: 1px dashed lighten($link-color, 15)
+  color: $link-color
+  font-weight: bold
+  padding: 1px 3px
   &:hover
-    color: #3366CC
+    background-color: rgba(yellow, .21)
+    border:
+      color: $link-color
+      style: solid
+    color: darken($link-color, 15)
     text-decoration: none
   &:focus,
   &:active
