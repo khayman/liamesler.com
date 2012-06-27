@@ -1,8 +1,7 @@
-jQuery.extend jQuery.easing,
-  easeOutBack: (x, t, b, c, d, s) ->
-    s = 1.70158 unless s?
-    c * ((t = t / d - 1) * t * ((s + 1) * t + s) + 1) + b
+# jQuery plugins & extensions
+jQuery.extend jQuery.easing, easeOutBack: (x, t, b, c, d, s) -> c * ((t = t / d - 1) * t * (((s = 0.88125) + 1) * t + s) + 1) + b
 
+# Global SITE var wrapper
 window.SITE = ( ->
   window.log = ->
     log.history = log.history or []
@@ -43,9 +42,10 @@ window.SITE = ( ->
 
   util:
     dropdownHide: (dropdown) ->
-      dropdown.stop(true, true).fadeOut(150, -> dropdown.removeClass 'open')
+      dropdown.stop(true, true).fadeOut(100, -> dropdown.removeClass 'open')
     dropdownShow: (dropdown) ->
       dropdown.stop(true, true).slideDown(375, 'easeOutBack', -> dropdown.addClass 'open')
 )()
 
+# Init function
 $ -> SITE.initialize()
