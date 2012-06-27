@@ -1,6 +1,7 @@
 source "http://rubygems.org"
 
 gem "sinatra", "~> 1.2.3"
+gem "rdiscount"
 gem "haml", "~> 3.1.1"
 gem "sass", "~> 3.1.1"
 gem "compass", "~> 0.11.1"
