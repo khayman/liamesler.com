@@ -185,36 +185,41 @@ p
   height: 100%
   margin-top: 15px
   overflow: visible
-  padding-bottom: 53px
+  padding: 25px 0 53px
   h1
+    font-weight: bold
     font-size: 175%
     margin: 5px 0 15px
   footer
     margin-top: 15px
     font-size: 87.5%
-  .wrapper > aside
-    width: 250px
-    h1
-      font-size: 135%
-  .wrapper > .content
-    width: 800px
-    padding-bottom: 40px
+  .wrapper
+    padding-top: 25px
+    & > .content
+      float: left
+      width: 70%
+      padding-bottom: 40px
+    & > aside
+      float: right
+      width: 25%
+      h1
+        font-size: 135%
 
 .main-footer
-  background: inline-image('footer-bg.png')
+  background: inline-image('footer-bg.jpg')
   color: $dark-bg-text-color
   display: table-row
   font-size: 90%
   height: 1px
   padding-bottom: 15px
   &:before
-    $height: 13px
+    $height: 15px
     content: ''
     background: inline-image('footer-bg-top.png') repeat-x
     display: block
     height: $height
     position: relative
-    top: -$height
+    top: - $height + 1
     width: 100%
   .wrapper
     overflow: hidden
