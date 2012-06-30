@@ -28,13 +28,13 @@ p
 
 .wrapper
   margin: 0 auto
-  width: $site-max-width
+  max-width: $site-max-width
+  width: 92%
 
 .main-header
   background: url('/images/bg-top.png') repeat-x
   display: table-row
   height: 1px
-  min-height: 182px
   overflow: auto
   .logo
     +transition-property(top)
@@ -52,8 +52,8 @@ p
       opacity: .87
       top: 0
   nav
+    +pie-clearfix
     margin-top: 75px
-    height: 100px
     float: right
     > ul > li
       +border-radius(3px)
@@ -123,7 +123,7 @@ p
 .dropdown-wrapper
   +border-radius($menu-border-radius)
   +box-shadow(rgba(black, .10) 0 8px 15px)
-  background: rgba($menu-bg-color, .9)
+  background: rgba($menu-bg-color, .95)
   border: 1px solid darken(desaturate($menu-bg-color, 3), 17)
   display: none
   left: 0
@@ -131,10 +131,10 @@ p
   position: absolute
   z-index: 69
   li
-    white-space: nowrap
     border-bottom: 1px solid darken($menu-bg-color, 10)
     border-top: 1px solid lighten($menu-bg-color, 7)
     position: relative
+    white-space: nowrap
     .menu-icon
       +transition-property(background)
       +transition-duration(.15s)
@@ -291,3 +291,88 @@ a
   &:active
     outline: none
   &:visited
+
+
+// Media Queries
+@media screen and (min-width: 1750px)
+  body
+    font-size: 18px
+
+@media screen and (max-width: 1150px)
+  .wrapper
+    max-width: 960px
+  .main-header nav > ul > li
+    margin: 0 7px
+    & > a
+      &:link, &:visited
+        font-size: 110%
+
+@media screen and (max-width: 850px)
+  .dropdown-wrapper
+    li
+      a
+        line-height: 56px
+        height: 56px
+        padding-left: 64px
+      .menu-icon
+        left: 9px
+
+@media screen and (max-width: 800px)
+  .main-header
+    .logo, nav
+      float: none
+      margin:
+        left: auto
+        right: auto
+    nav
+      font-size: 100%
+      margin-top: 30px
+      text-align: center
+      & > ul
+        display: inline-block
+        text-align: center
+        & > li
+          float: none
+          display: inline-block
+          margin-bottom: 15px
+          text-align: left
+  .main-section
+    h1
+      font-size: 200%
+    .wrapper
+      padding-top: 0
+      & > aside
+        padding-bottom: 30px
+        float: none
+        width: 100%
+        h1
+          font-size: 200%
+      & > .content
+        padding-bottom: 0
+        float: none
+        width: 100%
+
+  .main-footer
+    font-size: 90%
+    .footer-group-1
+      margin-bottom: 10px
+      float: none
+      width: 100%
+    .footer-group-2, .footer-group-3, .footer-group-4
+      float: left
+      width: 33%
+    .footer-group-4
+      float: right
+
+  .dropdown-wrapper li a
+    font-weight: bold
+
+@media screen and (max-width: 480px)
+  .main-header
+    nav
+      font-size: 87.5%
+  .main-footer
+    .footer-group-2, .footer-group-3, .footer-group-4
+      width: 49%
+    .footer-group-2
+      display: none
