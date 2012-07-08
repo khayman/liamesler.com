@@ -33,6 +33,11 @@ get '/' do
   haml :index, layout: :'layouts/application'
 end
 
+get '/:page' do
+  page = :"site/#{params[:page]}"
+  haml page, layout: :'layouts/application'
+end
+
 get '/projects/:project/?' do
   page = :"site/projects/#{params[:project]}"
   haml page, layout: :'layouts/application'
