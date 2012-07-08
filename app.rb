@@ -30,15 +30,15 @@ get '/scripts/:name.js' do
 end
 
 get '/' do
-  haml :index, layout: :'layouts/application'
+  haml :index, layout: :'layouts/site'
 end
 
 get '/:page' do
   page = :"site/#{params[:page]}"
-  haml page, layout: :'layouts/application'
+  haml page, layout: :'layouts/site'
 end
 
 get '/projects/:project/?' do
   page = :"site/projects/#{params[:project]}"
-  haml page, layout: :'layouts/application'
+  haml page, layout: :'layouts/site'
 end
