@@ -102,7 +102,7 @@ a { text-decoration: none; }
 .main-section a:hover { background-color: rgba(255, 255, 0, 0.21); border-color: #798618; border-style: solid; color: #3f450c; text-decoration: none; }
 .main-section a:focus, .main-section a:active { outline: none; }
 
-@media screen and (min-width: 1750px) { body { font-size: 18px; } }
+@media screen and (min-width: 1750px) { body { font-size: 17px; } }
 @media screen and (max-width: 1150px) { .wrapper { max-width: 960px; }
   .main-header nav > ul > li { margin: 0 7px; }
   .main-header nav > ul > li > a:link, .main-header nav > ul > li > a:visited { font-size: 110%; } }
