@@ -30,9 +30,10 @@ get '/scripts/:name.js' do
 end
 
 get '/' do
-  haml :index, :layout => :'layouts/application'
+  haml :index, layout: :'layouts/application'
 end
 
-get '/about' do
-  haml :about, :layout => :'layouts/page'
+get '/projects/:project/?' do
+  page = :"site/projects/#{params[:project]}"
+  haml page, layout: :'layouts/application'
 end
