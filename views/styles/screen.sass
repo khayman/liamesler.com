@@ -27,6 +27,9 @@ html, body
 p
   margin-bottom: 15px
 
+strong, b
+  font-weight: bold
+
 .clear
   clear: both
 
@@ -195,10 +198,13 @@ p
       a
         +border-radius(0 0 $menu-border-radius $menu-border-radius)
 
-.contact ul
+.contact ul,
+.slides .description ul
   list-style-type: disc
   line-height: 1.75
   margin: 0
+  li
+    text-align: left
 
 .main-section
   display: table-row
