@@ -282,19 +282,49 @@ p
   background-color: #a6a196
   +filter-gradient(#a6a196, #a6a196, vertical)
   +background-image(linear-gradient(top, hsl(41,8%,62%) 0%,hsl(41,22%,81%) 35%,hsl(41,22%,81%) 65%,hsl(41,8%,62%) 100%))
-  +border-radius(3px)
-  +box-shadow(hsl(36, 20%, 80%) 0 1px 4px 1px)
+  +border-radius(2px)
+  +box-shadow(hsl(36, 20%, 75%) 0 1px 2px)
+  display: inline-block
+  width: auto
   line-height: 0
   padding: 1px
+  &.large
+    +border-radius(3px)
+    +box-shadow(hsl(35, 20%, 80%) 0 1px 4px 1px)
   &.left
     margin-right: 2%
   &.right
     margin-left: 2%
   & > img
-    border: 3px solid #edefeb
+    +border-radius(2px)
+    border: 1px solid #edefeb
+  &.large > img
     +border-radius(3px)
+    border-width: 3px
+
+.centered-image
+  display: block
+  margin: 0 auto
+
+.slides
+  li
+    text-align: center
+
+.slider-controls
+  padding: 10px 0 20px
+  text-align: center
+  li
+    margin-left: 10px
+    &:first-child
+      margin-left: 0
+  img
+    opacity: .3
+    cursor: pointer
+    &.flex-active, &:hover
+      opacity: 1
 
 .description
+  text-align: left
 
 // Links
 a
