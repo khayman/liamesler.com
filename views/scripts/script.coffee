@@ -76,12 +76,11 @@ window.SITE = ( ->
           SITE.util.dropdownShow dropdown
 
     outsideClick: ->
-      $('html').click (e)->
+      $(document).click (e)->
         item     = e.target
         dropdown = $('.dropdown-wrapper.open')
 
-        if not dropdown.is ':animated' and dropdown.has(item).length is 0
-          SITE.util.dropdownHide dropdown
+        SITE.util.dropdownHide dropdown if not dropdown.is ':animated' and dropdown.has(item).length is 0
 
     slider: ->
       $('.slider').flexslider
@@ -93,6 +92,7 @@ window.SITE = ( ->
         smoothHeight     : true
         touch            : true
         useCSS           : true
+
   util:
     dropdownHide: (dropdown) -> dropdown.stop(true, true).fadeOut(100, -> dropdown.removeClass 'open')
     dropdownShow: (dropdown) -> dropdown.stop(true, true).slideDown(375, 'easeOutBack', -> dropdown.addClass 'open')
