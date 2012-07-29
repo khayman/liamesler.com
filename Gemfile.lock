@@ -35,7 +35,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activesupport
+  activesupport (~> 3.2.6)
   coffee-script
   compass (~> 0.11.1)
   compass-colors
