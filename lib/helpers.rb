@@ -5,5 +5,12 @@ module Sinatra
     end
   end
 
+  module Navigation
+    def current_page?(path='')
+      request.path_info.include?(path) ? 'current' : nil
+    end
+  end
+
   helpers RenderPartial
+  helpers Navigation
 end

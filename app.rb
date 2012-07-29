@@ -18,14 +18,12 @@ set :sass    , Compass.sass_engine_options
 # Application routes
 get '/styles/:name.css' do
   style = :"styles/#{params[:name]}"
-
   content_type 'text/css', charset: 'utf-8'
   sass style
 end
 
 get '/scripts/:name.js' do
   script = :"scripts/#{params[:name]}"
-
   content_type 'text/javascript'
   coffee script
 end

@@ -3,10 +3,10 @@
     %a.logo{ href: '/' }
     %nav
       %ul
-        %li.active
+        %li{ class: current_page?('about-me') }
           %a{ href: '/about-me' } About Me
-        %li.dropdown
-          %a{ href: '#' } Projects
+        %li.dropdown{ class: current_page?('projects') }
+          %a{ href: '/projects' } Projects
           .dropdown-wrapper
             %ul
               %li
@@ -33,7 +33,7 @@
                 %a{ href: '/projects/sammi' }
                   .menu-icon.sammi
                   %span Sammi Seahorse
-        %li
+        %li{ class: current_page?('resume') }
           %a{ href: '/resume' } Résumé
-        %li
+        %li{ class: current_page?('contact') }
           %a{ href: '/contact' } Contact
