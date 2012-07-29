@@ -1,6 +1,7 @@
 source "http://rubygems.org"
 
 gem "sinatra", "~> 1.2.3"
+gem "heroku"
 
 # Gems used in production only
 group :assets do
