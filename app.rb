@@ -2,6 +2,7 @@ require 'rubygems'
 require 'sinatra'
 require 'haml'
 require 'compass'
+require 'active_support/all'
 
 # Helpers
 require './lib/helpers'
@@ -30,15 +31,19 @@ get '/scripts/:name.js' do
 end
 
 get '/' do
+  @title = "Liam Esler"
   haml :index, layout: :'layouts/site'
 end
 
-get '/:page' do
-  page = :"site/#{params[:page]}"
+get '/projects/:project/?' do
+  @title = "Liam Esler &mdash; #{params[:project].titleize}"
+  page   = :"site/projects/#{params[:project]}"
   haml page, layout: :'layouts/site'
 end
 
-get '/projects/:project/?' do
-  page = :"site/projects/#{params[:project]}"
+get '/:page' do
+  @title = "Liam Esler &mdash; #{params[:page].titleize}"
+  page   = :"site/#{params[:page]}"
   haml page, layout: :'layouts/site'
 end
+
