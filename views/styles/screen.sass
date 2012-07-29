@@ -91,22 +91,23 @@ p
         opacity: 0
         position: absolute
         width: 17px
-      &.active, &:hover
+      &.current, &:hover
         +box-shadow($menu-bg-shadow-color 0 3px 2px inset)
         background-color: rgba($menu-bg-shadow-color, .4)
         border-color: darken($menu-bg-color, 15)
         border-bottom-color: darken($menu-bg-color, 5)
         border-top-color: darken(desaturate($menu-bg-color, 6), 25)
-      &.active:after
+      &.current:after
         bottom: -11px
         opacity: 1
       &:hover
         +box-shadow(none)
         background-color: rgba($menu-bg-shadow-color, .3)
         border-color: darken($menu-bg-color, 5)
-        & > a:hover
-          +single-text-shadow(1px, 0, 0, hsl(40, 5%, 95%))
-          color: darken($menu-item-color, 5)
+        & > a
+          &:link, &:visited
+            +single-text-shadow(1px, 0, 0, hsl(40, 5%, 95%))
+            color: darken($menu-item-color, 35)
       & > a
         &:link, &:visited
           color: $menu-item-color
@@ -189,7 +190,7 @@ p
   h1
     font-weight: bold
     font-size: 175%
-    margin: 5px 0 15px
+    margin: 10px 0 15px
   footer
     margin-top: 15px
     font-size: 87.5%
