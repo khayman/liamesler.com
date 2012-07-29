@@ -26,6 +26,9 @@ html, body
 p
   margin-bottom: 15px
 
+.clear
+  clear: both
+
 .wrapper
   margin: 0 auto
   max-width: $site-max-width
@@ -187,24 +190,28 @@ p
   margin-top: 15px
   overflow: visible
   padding: 25px 0 53px
+  .content
+    padding: 25px 0 40px
   h1
     font-weight: bold
-    font-size: 175%
-    margin: 10px 0 15px
+    font-size: 185%
+    margin: 10px 0
   footer
     margin-top: 15px
     font-size: 87.5%
-  .wrapper
-    padding-top: 25px
-    & > .content
-      float: left
-      width: 70%
-      padding-bottom: 40px
-    & > aside
-      float: right
-      width: 25%
-      h1
-        font-size: 135%
+    .wrapper
+      padding-top: 25px
+      .content
+        float: left
+        width: 70%
+        padding-bottom: 40px
+      .slider
+        width: 100%
+      aside
+        float: right
+        width: 25%
+        h1
+          font-size: 135%
 
 .main-footer
   background: inline-image('footer-bg.jpg')
@@ -232,7 +239,7 @@ p
       size: 120%
       weight: bold
     letter-spacing: 1px
-    margin: 7px 0
+    margin: 0 0 7px
     text-transform: uppercase
   .footer-group
     float: left
@@ -270,6 +277,24 @@ p
         bottom-color: white
       color: white
 
+.bordered
+  background-color: #a6a196
+  +filter-gradient(#a6a196, #a6a196, vertical)
+  +background-image(linear-gradient(top, hsl(41,8%,62%) 0%,hsl(41,22%,81%) 35%,hsl(41,22%,81%) 65%,hsl(41,8%,62%) 100%))
+  +border-radius(3px)
+  +box-shadow(hsl(36, 20%, 80%) 0 1px 4px 1px)
+  line-height: 0
+  padding: 1px
+  &.left
+    margin-right: 2%
+  &.right
+    margin-left: 2%
+  & > img
+    border: 3px solid #edefeb
+    +border-radius(3px)
+
+.description
+
 // Links
 a
   text-decoration: none
@@ -277,16 +302,16 @@ a
   +transition-property('color background')
   +transition-duration(.1s)
   +transition-timing-function(ease-in-out)
-  border-bottom: 1px dashed lighten($link-color, 15)
+  border-bottom: 1px dashed darken($link-color, 5)
   color: $link-color
   font-weight: bold
   padding: 1px 3px
   &:hover
-    background-color: rgba(yellow, .21)
+    background-color: hsl(60, 90%, 80%)
     border:
-      color: $link-color
+      color: black
       style: solid
-    color: darken($link-color, 15)
+    color: black
     text-decoration: none
   &:focus,
   &:active
@@ -299,7 +324,7 @@ a
   body
     font-size: 17px
 
-@media screen and (max-width: 1150px)
+@media screen and (max-width: 1050px)
   .wrapper
     max-width: 960px
   .main-header nav > ul > li
@@ -353,7 +378,7 @@ a
         h1
           font-size: 200%
       & > .content
-        padding-bottom: 0
+        padding-bottom: 20px
         float: none
         width: 100%
 
